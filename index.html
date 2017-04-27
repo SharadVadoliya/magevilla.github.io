@@ -9,17 +9,18 @@
 </head>
 <body>
 	<div id="countdown">
-      <ul id="timer">
-        <li><span id="days" class="counter">00</span><span class="label">Days</span><li>
-        <li><span id="hours" class="counter">00</span><span class="label">Hours</span><li>
-        <li><span id="minutes" class="counter">00</span><span class="label">Monutes</span><li>
-        <li><span id="seconds" class="counter">00</span><span class="label">Seconds</span><li>
-      </ul>
-      <div id="info">
-        <h1 id="comming-soon">Comming Soon</h1>
-        <p id="comming-soon-info">Magevilla will came for you with awesome magento 2 modules, for fullfill your needs.</p>
-        <!-- <p id="powered-by">@ Copyright by parthviroja [ <a href="http://parthviroja.in" target="_blank">http://parthviroja.in</a> ]</p> -->
-      </div> 
+	  <ul id="timer">
+		<li><span id="days" class="counter">00</span><span class="label">Days</span><li>
+		<li><span id="hours" class="counter">00</span><span class="label">Hours</span><li>
+		<li><span id="minutes" class="counter">00</span><span class="label">Monutes</span><li>
+		<li><span id="seconds" class="counter">00</span><span class="label">Seconds</span><li>
+	  </ul>
+	  <div id="info">
+		<h1 id="comming-soon">Comming Soon</h1>
+		<p id="comming-soon-info">Magevilla will came for you with awesome magento 2 modules, for fullfill your needs.</p>
+		<!-- <p id="powered-by">@ Copyright by parthviroja [ <a href="http://parthviroja.in" target="_blank">http://parthviroja.in</a> ]</p> -->
+		<p id="powered-by">@ Copyright by magevilla [ <a href="https://github.com/magevilla" target="_blank">Magento 2 Modules</a> ]</p>
+	  </div> 
   </div>
 <script type="text/javascript">
   // Timer
@@ -29,26 +30,26 @@
   var secondsEl = document.querySelector("#seconds");
   function timer(){
 
-    var endTime = new Date("01 July 2017 12:00:00 GMT+05:00");
-    endTime = (Date.parse(endTime) / 1000);
-    var now = new Date();
-    now = (Date.parse(now) / 1000);
-    var timeLeft = endTime - now;
-    var days = Math.floor(timeLeft / 86400);
-    var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
-    var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
-    var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
+	var endTime = new Date("01 July 2017 12:00:00 GMT+05:00");
+	endTime = (Date.parse(endTime) / 1000);
+	var now = new Date();
+	now = (Date.parse(now) / 1000);
+	var timeLeft = endTime - now;
+	var days = Math.floor(timeLeft / 86400);
+	var hours = Math.floor((timeLeft - (days * 86400)) / 3600);
+	var minutes = Math.floor((timeLeft - (days * 86400) - (hours * 3600 )) / 60);
+	var seconds = Math.floor((timeLeft - (days * 86400) - (hours * 3600) - (minutes * 60)));
 
-    // uncomment this if you want it to say 03 HOURS, instead of 3 HOURS
-    /*
-    if (hours < "10") { hours = "0" + hours; }
-    if (minutes < "10") { minutes = "0" + minutes; }
-    if (seconds < "10") { seconds = "0" + seconds; }
-    */
-    daysEl.innerHTML = days;
-    hoursEl.innerHTML = hours;
-    minutesEl.innerHTML = minutes;
-    secondsEl.innerHTML = seconds;
+	// uncomment this if you want it to say 03 HOURS, instead of 3 HOURS
+	/*
+	if (hours < "10") { hours = "0" + hours; }
+	if (minutes < "10") { minutes = "0" + minutes; }
+	if (seconds < "10") { seconds = "0" + seconds; }
+	*/
+	daysEl.innerHTML = days;
+	hoursEl.innerHTML = hours;
+	minutesEl.innerHTML = minutes;
+	secondsEl.innerHTML = seconds;
   }
   setInterval(function() { timer(); }, 1000);
 </script>
